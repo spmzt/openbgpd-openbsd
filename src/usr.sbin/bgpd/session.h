@@ -20,6 +20,10 @@
 #include <sys/socket.h>
 #include <time.h>
 
+#ifdef __FreeBSD__
+#undef MSG_NOTIFICATION
+#endif
+
 #define	MAX_BACKLOG			5
 #define	INTERVAL_CONNECTRETRY		120
 #define	INTERVAL_HOLD_INITIAL		240
